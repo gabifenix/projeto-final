@@ -61,6 +61,10 @@ body {
     text-align: center;
 }
 
+.col-lg-4 img {
+    border-radius: 75px;
+}
+
 .marketing h2 {
     font-weight: 400;
 }

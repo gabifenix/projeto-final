@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/cadastro', function () {
     return view('site.register');
 })->name('site.register');
+
+Route::get('/filmes-cadastrados', function () {
+    return view('site.moviedates');
+})->name('site.moviedates');
