@@ -24,3 +24,10 @@ Route::get('/cadastro', function () {
 Route::get('/filmes-cadastrados', function () {
     return view('site.moviedates');
 })->name('site.moviedates');
+
+Route::get('/contato', function () {
+    return view('site.contact');
+})->name('site.contact');
+
+use App\Http\Controllers\MoviesController;
+Route::resource('movies', MoviesController::class);

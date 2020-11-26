@@ -31,9 +31,12 @@
 <main role="main" class="container">
   <div class="jumbotron">
   <h1>Cadastre o seu filme aqui</h1>
-  <input class="form-control mr-sm-2" type="text" placeholder="" aria-label="Search">
-      <br>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cadastrar</button>
+  <form action="{{ route('movies.store')}}" method="POST">
+  @csrf
+  <input class="form-control mr-sm-2" type="text" name="movie" placeholder="" aria-label="Search">
+  <br>
+  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cadastrar</button>
+  </form>
   </div>
 </main>  
 
