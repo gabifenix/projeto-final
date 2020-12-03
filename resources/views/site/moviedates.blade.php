@@ -32,21 +32,6 @@
 <main role="main" class="container">
   <br>
   <h1>Filmes cadastrados</h1>
-  <a href="{{ route('movies.register')}}" method="POST">Novo Filme</a>
-  <ul>
-  @foreach ($site as $site)
-  <li>
-      {{ $site['id'] }} | {{ $site['movie'] }}
-      <a href="{{route('movies.edit',$movie['id'])}}"> Editar</a>
-      <a href="{{route('movies.info',$movie['id'])}}"> Info</a>
-      <form action="{{ route('movies.destroy', $movie['id'])}}" method="POST">
-          @csrf
-          @method('DELETE')
-          <input type="submit" value="Apagar">
-      </form>
-  </li>
-  @endforeach
-  </ul>
 </main>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Movie;
 
 use Illuminate\Http\Request;
 
@@ -15,7 +16,7 @@ class MoviesController extends Controller
     public function store(Request $request)
     {
         $dados = $request->all();
-        dd($dados);
+        // dd($dados);
         return Movie::create($request->all());
     }
 
@@ -26,7 +27,7 @@ class MoviesController extends Controller
 
     public function edit($id)
     {
-
+        
     }
 
     public function update(Request $request, $id)
